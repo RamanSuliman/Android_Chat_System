@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Chat System</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="custom_dialog_header"> Custom Dialog </string>
+    <string name="username">Name</string>
+    <string name="age">Age</string>
+    <string name="dialog_agree">I agree to the terms</string>
+    <string name="dialog_submit">Submit</string>
+    <string name="calls_history">Calls</string>
+    <string name="unreadMessage">99+</string>
+    <string name="demoMessage">Hi, I just wanted to confirm that you are not busy and perhaps meet over a coffee?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment"> Hello Main </string>
+    <!-- Strings related demo date and time -->
+    <string name="date">24–11–2022</string>
+    <string name="time">14:52</string>
+    <string name="dateTime">24 Sep 2022 10:30pm</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="textviewTester">TextView</string>
+    <string name="user_name">User Name</string>
+
+    <!-- Code Verification -->
+    <string name="OPT_code_resend">Didn\'t get the code? <b>Resend</b></string>
+
+
+</resources>

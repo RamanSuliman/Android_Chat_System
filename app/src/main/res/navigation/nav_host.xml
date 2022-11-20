@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="raman.chatSystem.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_single_Chat_Fragment"
+            app:destination="@id/single_Chat_Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_codeVerifyFragment"
+            app:destination="@id/codeVerifyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/single_Chat_Fragment"
+        android:name="raman.chatSystem.fragments.singleChat.SingleChatFragment"
+        android:label="fragment_single__chat_"
+        tools:layout="@layout/fragment_single__chat_" />
+    <fragment
+        android:id="@+id/callingFragment"
+        android:name="raman.chatSystem.fragments.CallingFragment"
+        android:label="fragment_calling"
+        tools:layout="@layout/fragment_calling" />
+    <fragment
+        android:id="@+id/newUserFragment"
+        android:name="raman.chatSystem.fragments.phoneSignUp.NewUserFragment"
+        android:label="fragment_new_user"
+        tools:layout="@layout/fragment_new_user" />
+    <fragment
+        android:id="@+id/codeVerifyFragment"
+        android:name="raman.chatSystem.fragments.phoneSignUp.CodeVerifyFragment"
+        android:label="fragment_code_verify"
+        tools:layout="@layout/fragment_code_verify" >
+        <action
+            android:id="@+id/action_codeVerifyFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/callHistoryFragment"
+        android:name="raman.chatSystem.fragments.CallHistoryFragment"
+        android:label="fragment_call_history"
+        tools:layout="@layout/fragment_call_history" />
+</navigation>

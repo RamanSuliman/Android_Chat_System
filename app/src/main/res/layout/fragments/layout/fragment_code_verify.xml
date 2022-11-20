@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/code_verify_frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.phoneSignUp.CodeVerifyFragment"
+    android:padding="10dp"
+    android:background="#f7f7f7"
+    android:orientation="vertical">
+    
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_phone"/>
+
+    <LinearLayout
+        android:id="@+id/panel_Phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Phone Number"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter your phone number to continue"
+            android:textAlignment="center"
+            android:textColor="#777777" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/call_codes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:background="@null"
+                android:spinnerMode="dropdown"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/input_box_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:hint="+44xxxxxxxxxx"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textColorHint="#757575"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/phoneErrorMsg"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Error Message"
+            android:textAlignment="center"
+            android:textColor="@color/error"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_phone_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_color"
+            android:text="Continue"
+            android:background="@drawable/button_background"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panel_Code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Verfication Code"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/codeSentDescription"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter the code sent to +44xxxxxxxxxx"
+            android:textAlignment="center"
+            android:textColor="#777777" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/input_box_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:hint="00000"
+            android:textColorHint="#c5c5c5"
+            android:inputType="phone"
+            android:padding="10dp"
+            android:maxLength="6"
+            android:textAlignment="center"
+            android:textColor="#000"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/resendCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#777777"
+            android:text="@string/OPT_code_resend"/>
+
+        <TextView
+            android:id="@+id/codeErrorMsg"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Error Message"
+            android:textAlignment="center"
+            android:textColor="@color/error"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_code_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="5dp"
+            android:text="Submit"
+            android:background="@drawable/button_background"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_gravity="center|bottom">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ipAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="asdasdads"
+            android:textColor="@color/error"
+            android:textSize="@dimen/_20ssp"
+            />
+
+        <include
+            android:id="@+id/networking"
+            layout="@layout/network_connection" />
+    </FrameLayout>
+
+</LinearLayout>

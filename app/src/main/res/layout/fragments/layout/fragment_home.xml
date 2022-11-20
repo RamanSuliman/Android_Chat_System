@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/background"
+    tools:context=".fragments.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+   <RelativeLayout
+       android:id="@+id/header"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       android:padding="@dimen/_16sdp">
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/appName"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="LogoChat"
+           android:textStyle="bold"
+           android:shadowColor="@color/btn_background"
+           android:shadowDx="1"
+           android:shadowDy="1"
+           android:shadowRadius="30"
+           android:textColor="@color/logo_color"
+           android:textSize="@dimen/_33ssp"
+           android:layout_centerVertical="true"
+           android:layout_alignParentStart="true"
+           />
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:id="@+id/btnCallsHistory"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:background="@drawable/background_chat_input"
+           android:layout_alignParentEnd="true"
+
+           android:paddingStart="@dimen/_16sdp"
+           android:paddingEnd="@dimen/_16sdp"
+
+           android:textColor="@color/text_color"
+           android:textSize="@dimen/_24ssp"
+           android:text="Calls"/>
+
+   </RelativeLayout>
+
+
+    <View
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e2e2e2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/liner"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintStart_toEndOf="parent"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_16sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <include android:id="@+id/networking"
+            layout="@layout/network_connection" />
+
+        <FrameLayout
+            android:id="@+id/active_users_background"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+
+            android:layout_alignStart="@+id/layoutSend"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_new_chat"
+            android:layout_alignParentStart="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/number_of_active_users"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="14"
+                android:gravity="center"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/_24ssp"
+                android:textStyle="bold"
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/layoutSend"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_new_chat"
+            android:layout_alignParentEnd="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_8sdp"
+                android:src="@drawable/ic_new_chat" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <!--
+    <Button
+        android:id="@+id/btnFragement1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Fragment Home"
+        app:layout_constraintEnd_toStartOf="@+id/btnFragement2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFragement2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Fragment 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnFragement1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayoutFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFragement2"/>
+-->
+    <!-- This if wanted to show a static fragment
+       <fragment
+           tools:layout="@android:layout/simple_gallery_item"
+           android:name="raman.chatsystem.InnerFirstFragmentTest"
+           android:id="@+id/fragment"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_marginTop="10dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.5"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/btnFragement2" />
+   -->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "870841374565",
+    "project_id": "phone-authen-50692",
+    "storage_bucket": "phone-authen-50692.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870841374565:android:6d5cdffe1e8d3ff298f38c",
+        "android_client_info": {
+          "package_name": "raman.chatSystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870841374565-u71hk3fgs5oelmbb913lud6m5m73n43a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpkNROFHvv7QLmFseccPaOVp5cc00xHIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "870841374565-u71hk3fgs5oelmbb913lud6m5m73n43a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_background">#000000</color>
+    <color name="text_color">#FFFFFFFF</color>
+    <color name="text_hint_color">#b0b3b2</color>
+    <color name="logo_color">#e2e2e2</color>
+    <color name="view_content">#cdefe2</color>
+    <color name="background_sent_message">#a6f3fb</color>
+    <color name="background_received_message">#c1f9e5</color>
+    <color name="fragment_background">#FFFFFFFF</color>
+
+    <color name="border">#646464</color>
+
+    <color name="available">#1f4200</color>
+    <color name="notAvailable">#420000</color>
+
+    <color name="error">#bf0d00</color>
+
+    <color name="colorPrimary">#ffdc00</color>
+    <color name="colorPrimaryVariant">#8a7d2c</color>
+    <color name="colorOnPrimary">#5a5220</color>
+
+    <color name="colorSecondary">#f97f0b</color>
+    <color name="colorSecondaryVariant">#9c591a</color>
+    <color name="colorOnSecondary">#5c3c1e</color>
+</resources>
